@@ -5,14 +5,14 @@ import { AddBlock, Editor } from "./Block"
 import { initBlocks } from "./consts"
 import { Block, BlockType } from "./types"
 import { css, ThemeProvider } from "@emotion/react"
-import { theme, useTheme, Theme } from "components/theme"
+import { theme, useTheme, Theme, colors } from "components/theme"
 
 const styles = {
     main: (t: Theme) =>
         css({
             backgroundColor: t.colors.background,
             padding: 10,
-            color: t.colors.font,
+            color: colors[t.colorSchema].font,
             width: 800,
             margin: "auto",
         }),
